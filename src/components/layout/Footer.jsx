@@ -22,8 +22,8 @@ export default function Footer(){
         },
     ]
     return(
-        <div className="bg-slate-800 px-5 py-8">
-            <div className="flex flex-col space-y-5 lg:flex-row justify-between lg:mx-10">
+        <div className="bg-slate-800 py-8">
+            <div className="flex flex-col space-y-5 lg:flex-row justify-between px-5 lg:mx-10 mb-6">
                 <div className="flex flex-col space-y-3">
                     <div className="flex items-center text-xl font-semibold space-x-1 text-white">
                         <FaNewspaper className="text-blue-800"/>
@@ -62,7 +62,8 @@ export default function Footer(){
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="text-slate-300 text-center pt-5 border-t-1 border-slate-500 ">
+                <p>© 2024 NewsHub. All rights reserved.</p>
             </div>
         </div>
     )
