@@ -2,32 +2,12 @@ import { useState } from "react";
 import { FaNewspaper } from "react-icons/fa6";
 import { IoMenu, IoSearch, IoClose } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import link from "./linkCategories";
 export default function NavBar(){
     const [open,setOpen]=useState(false)
 
     const handleClick=()=>setOpen(!open)
-    const link = [
-        {
-            href:"/",
-            label:"Home"
-        },
-        {
-            href:"/politics",
-            label:"Politics"
-        },
-        {
-            href:"/technology",
-            label:"Technology"
-        },
-        {
-            href:"/sport",
-            label:"Sport"
-        },
-        {
-            href:"/business",
-            label:"Business"
-        }
-    ]
+    
     return(
         <div>
         <div className="flex justify-between pt-2 pb-4 shadow-md px-5">
