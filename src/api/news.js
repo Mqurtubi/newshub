@@ -16,13 +16,14 @@ const getNews= async ()=>{
     }
 }
 
-const getNewsTopHeadlines= async ()=>{
+const getNewsTopHeadlines= async (category="")=>{
     try{
         const endPoint="https://newsapi.org/v2/top-headlines"
         const res=await axios.get(endPoint,{
             params:{
                 country:"us",
-                apikey:API_KEY
+                apikey:API_KEY,
+                category:category
             }
         })
         return res.data

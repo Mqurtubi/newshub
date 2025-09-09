@@ -1,0 +1,35 @@
+const categories=[
+        {
+            label:"All",
+            category:""
+        },
+        {
+            label:"Business",
+            category:"business"
+        },
+        {
+            label:"Entertainment",
+            category:"entertainment"
+        },
+        {
+            label:"General",
+            category:"general"
+        },
+        {
+            label:"Health",
+            category:"health"
+        },
+        {
+            label:"Science",
+            category:"science"
+        },
+        {
+            label:"Sports",
+            category:"sports"
+        },
+        {
+            label:"Technology",
+            category:"technology"
+        },
+]
+export default categories
