@@ -19,7 +19,7 @@ export default function NavBar(){
             <div className="hidden md:flex  space-x-5">
                 {
                     link.map((item,index)=>(
-                            <NavLink to={item.href} className={({isActive})=> isActive ? "text-blue-800 font-semibold":"text-slate-600"} key={index}>{item.label}</NavLink>
+                            <NavLink to={item.href} className={({isActive,isPending})=> isActive ? "text-blue-600" : isPending ? "text-gray-400" : "text-black"} key={index}>{item.label}</NavLink>
 
                     ))
                 }
@@ -47,7 +47,7 @@ export default function NavBar(){
             </div>
             {
                 link.map((item,index)=>(
-                        <NavLink to={item.href} className={({isActive})=> isActive ? "text-slate-800 font-semibold":"text-white"} key={index}>{item.label}</NavLink>
+                        <NavLink to={item.href} className={({isActive,isPending})=> isActive ? "text-blue-600" : isPending ? "text-gray-400" : "text-black"} key={index}>{item.label}</NavLink>
                 ))
             }
         </div>
