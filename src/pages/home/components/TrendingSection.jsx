@@ -1,7 +1,7 @@
 import TrendingFilter from "./TrendingFilter"
-import CardTrending from "./CardTrending"
+import Card from "./Card"
 import useNewsTrendingStore from "../../../store/newsTrendingStore"
-import SkeletonCardTrendig from "./SkeletonCardTrending"
+import SkeletonCard from "./SkeletonCard"
 import { useEffect } from "react"
 export default function TrendingSection(){
     const {articles,loading} = useNewsTrendingStore()
@@ -16,11 +16,11 @@ export default function TrendingSection(){
                 {
                     loading&&(
                         <>
-                            <SkeletonCardTrendig variant="big"/>
+                            <SkeletonCard variant="big"/>
                             <div className="flex flex-col space-y-4 md:col-span-1">
-                                <SkeletonCardTrendig/>
-                                <SkeletonCardTrendig/>
-                                <SkeletonCardTrendig/>
+                                <SkeletonCard/>
+                                <SkeletonCard/>
+                                <SkeletonCard/>
                             </div>
                         </>
                     )
@@ -28,11 +28,11 @@ export default function TrendingSection(){
                 {
                     !loading &&(
                         <>
-                            <CardTrending variant="big" article={articles[0]}/>
+                            <Card variant="big" article={articles[0]}/>
                             <div className="flex flex-col space-y-4 md:col-span-1">
                                 {
                                     articles.slice(1,4).map((item,index)=>(
-                                    <CardTrending article={item} key={index}/>
+                                    <Card article={item} key={index}/>
                                 ))
                                 }
                             </div>

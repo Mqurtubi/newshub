@@ -1,6 +1,6 @@
 import { timeAgo } from "../../../utils/timeAgo"
 import PropTypes from "prop-types"
-export default function CardTrending({variant="small",article}){
+export default function Card({variant="small",article}){
     const isBig=variant === "big"
     return(
         <div className={`w-full shadow-sm/30 space-y-5 rounded-xl overflow-hidden ${isBig ? "md:col-span-2 ":"md:col-span-1"}`}>
@@ -24,7 +24,7 @@ export default function CardTrending({variant="small",article}){
         </div>
     )
 }
-CardTrending.propTypes={
+Card.propTypes={
     variant:PropTypes.string || null.isRequired,
     article:PropTypes.object.isRequired
 }

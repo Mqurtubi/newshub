@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-export default function SkeletonCardTrendig({variant="small"}){
+export default function SkeletonCard({variant="small"}){
     const isBig=variant === "big"
     return(
         <div className={`w-full shadow-sm/30 space-y-5 rounded-xl overflow-hidden ${isBig ? "md:col-span-2 ":"md:col-span-1"}`}>
@@ -23,6 +23,6 @@ export default function SkeletonCardTrendig({variant="small"}){
         </div>
     )
 }
-SkeletonCardTrendig.propTypes={
+SkeletonCard.propTypes={
     variant:PropTypes.string.isRequired
 }

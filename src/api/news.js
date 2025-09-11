@@ -6,7 +6,7 @@ const getNews= async ()=>{
         const endPoint="https://newsapi.org/v2/everything";
         const res=await axios.get(endPoint,{
             params:{
-                q:'bitcoin',
+                sources:"cnn",
                 apikey:API_KEY,
             }
         })
