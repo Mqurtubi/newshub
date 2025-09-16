@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import useNewsTrendingStore from "../../../store/newsTrendingStore";
+import useNewsLatestStore from "../../../store/newsLatestStore";
 import categories from "./categories";
 export default function TrendingFilter(){
     const [dropdown,setDropdown]=useState(false)
     const {category,setCategory,label,setLabel,fetchArticles}=useNewsTrendingStore()
+    const {categoryLatest,setCategoryLatest,fetchArticlesLatest}=useNewsLatestStore()
     const handlerClick = () => setDropdown(!dropdown)
 
     const handlerSelect = (item) => {
         setCategory(item.category)
+        setCategoryLatest(item.category)
         setLabel(item.label)
         setDropdown(false)
     }
 
     useEffect(()=>{
         fetchArticles(category)
-    },[category,fetchArticles])
+        fetchArticlesLatest(categoryLatest)
+    },[category,fetchArticles,fetchArticlesLatest,categoryLatest])
     
     return(
         <div className="flex items-center justify-between ">

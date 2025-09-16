@@ -1,14 +1,10 @@
 import TrendingFilter from "./TrendingFilter"
-import Card from "./Card"
+import Card from "../../../components/ui/Card"
 import useNewsTrendingStore from "../../../store/newsTrendingStore"
-import SkeletonCard from "./SkeletonCard"
-import { useEffect } from "react"
+import SkeletonCard from "../../../components/ui/SkeletonCard"
 export default function TrendingSection(){
     const {articles,loading} = useNewsTrendingStore()
-    useEffect(()=>{
-        console.log(articles)
-        console.log(loading)
-    },[articles,loading])
+    
     return(
         <div className="mx-4">
             <TrendingFilter/>
