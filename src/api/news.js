@@ -1,29 +1,32 @@
 import axios from "axios";
 const API_KEY= import.meta.env.VITE_OWM_KEY;
 
-const getNews= async ()=>{
-    try {
-        const endPoint="https://newsapi.org/v2/everything";
+const getNews= async (category="",sort="published_desc")=>{
+    try{
+        const endPoint="http://api.mediastack.com/v1/news"
         const res=await axios.get(endPoint,{
             params:{
-                sources:"cnn",
-                apikey:API_KEY,
+                access_key:API_KEY,
+                categories:category,
+                languages:"en",
+                sort:sort
             }
         })
         return res.data
-    } catch (error) {
+    }catch(error){
         console.log(error.message)
     }
 }
 
 const getNewsTopHeadlines= async (category="")=>{
     try{
-        const endPoint="https://newsapi.org/v2/top-headlines"
+        const endPoint="http://api.mediastack.com/v1/news"
         const res=await axios.get(endPoint,{
             params:{
-                country:"us",
-                apikey:API_KEY,
-                category:category
+                access_key:API_KEY,
+                sort:"popularity",
+                categories:category,
+                languages:"en"
             }
         })
         return res.data
