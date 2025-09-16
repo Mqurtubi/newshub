@@ -14,7 +14,7 @@ const useNewsTrendingStore= create((set)=>({
         set({loading:true})
         try {
             const res= await getNewsTopHeadlines(category)
-            set({articles:res.articles,loading:false})
+            set({articles:res.data,loading:false})
         } catch (error) {
             console.error(error)
             set({loading:false})
