@@ -4,20 +4,33 @@ const link = [
             label:"Home"
         },
         {
-            href:"/politics",
-            label:"Politics"
+            href:"/entertainment",
+            label:"Entertainment"
         },
         {
             href:"/technology",
             label:"Technology"
         },
         {
-            href:"/sport",
-            label:"Sport"
+            href:"/sports",
+            label:"Sports"
         },
         {
             href:"/business",
             label:"Business"
-        }
+        },
+        {
+            href:"/general",
+            label:"General"
+        },
+        {
+            href:"/health",
+            label:"Health"
+        },
+        {
+            href:"/science",
+            label:"Science"
+        },
+        
 ]
 export default link

@@ -16,10 +16,10 @@ export default function NavBar(){
                 <FaNewspaper className="text-blue-800"/>
                 <p>News<span className="text-blue-800">Hub</span></p>
             </div>
-            <div className="hidden md:flex  space-x-5">
+            <div className="hidden lg:flex  space-x-5">
                 {
                     link.map((item,index)=>(
-                            <NavLink to={item.href} className={({isActive,isPending})=> isActive ? "text-blue-600" : isPending ? "text-gray-400" : "text-black"} key={index}>{item.label}</NavLink>
+                            <NavLink to={item.href} className={({isActive,isPending})=> isActive ? "text-blue-600" : isPending ? "text-gray-400" : "text-black"} key={index} >{item.label}</NavLink>
 
                     ))
                 }
@@ -30,7 +30,7 @@ export default function NavBar(){
                     <input type="text" className="border border-slate-400 rounded pl-10 focus:outline-none w-full" placeholder="Search news..."/>
                     <IoSearch className="absolute left-3 text-slate-400"/>
                 </div>
-                <div className="md:hidden">
+                <div className="lg:hidden">
                 {open ? (
                     <IoClose onClick={handleClick}/>
                 ):(
@@ -40,14 +40,14 @@ export default function NavBar(){
             </div>
         </div>
         <div className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-96 opacity-100":"max-h-0 opacity-0"}`}>
-        <div className="flex flex-col space-y-3 px-4 py-4 bg-blue-500 text-white md:hidden">
+        <div className="flex flex-col space-y-3 px-4 py-4 bg-blue-500 text-white lg:hidden">
             <div className="relative flex items-center sm:hidden">
                 <input type="text" className="border rounded pl-10 focus:outline-none w-full py-1" placeholder="Search news..."/>
                 <IoSearch className="absolute left-3"/>
             </div>
             {
                 link.map((item,index)=>(
-                        <NavLink to={item.href} className={({isActive,isPending})=> isActive ? "text-blue-600" : isPending ? "text-gray-400" : "text-black"} key={index}>{item.label}</NavLink>
+                        <NavLink to={item.href} className={({isActive,isPending})=> isActive ? "text-white" : isPending ? "text-gray-400" : "text-black"} key={index}>{item.label}</NavLink>
                 ))
             }
         </div>
