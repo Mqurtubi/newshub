@@ -9,6 +9,7 @@ import Business from "./pages/business/Business"
 import General from "./pages/general/General"
 import Health from "./pages/health/Health"
 import Science from "./pages/science/Science"
+import Search from "./pages/search/Search"
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
         <Route element={<General/>} path="/general"/>
         <Route element={<Health/>} path="/health"/>
         <Route element={<Science/>} path="/science"/>
+        <Route element={<Search/>} path="/search"/>
       </Routes>
       <Footer/>
     </div>
