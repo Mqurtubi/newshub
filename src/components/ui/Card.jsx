@@ -12,7 +12,7 @@ export default function Card({variant="small",article}){
             <p className="text-slate-400">{timeAgo(article.published_at) }</p>
             </div>
             <div className="flex flex-col space-y-2">
-                <p className={`${isBig ? "md:text-4xl text-xl line-clamp-2" : "text-xl line-clamp-1"} `}>{article.title}</p>
+                <a className={`${isBig ? "md:text-4xl text-xl line-clamp-2" : "text-xl line-clamp-1"} `} href={article.url} target="_blank">{article.title}</a>
                 <p className={`${isBig ? "line-clamp-2":"md:line-clamp-1 line-clamp-2"} text-slate-600`}>{article.description}</p>
             </div>
             <div className="flex justify-between">
