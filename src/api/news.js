@@ -3,7 +3,7 @@ const API_KEY= import.meta.env.VITE_OWM_KEY;
 
 const getNews= async (category="",sort="published_desc")=>{
     try{
-        const endPoint="http://api.mediastack.com/v1/news"
+        const endPoint="https://api.mediastack.com/v1/news"
         const res=await axios.get(endPoint,{
             params:{
                 access_key:API_KEY,
@@ -20,7 +20,7 @@ const getNews= async (category="",sort="published_desc")=>{
 
 const getNewsSearch= async (keywords="")=>{
     try {
-        const endPoint="http://api.mediastack.com/v1/news"
+        const endPoint="https://api.mediastack.com/v1/news"
         const res=await axios.get(endPoint,{
             params:{
                 access_key:API_KEY,
@@ -36,7 +36,7 @@ const getNewsSearch= async (keywords="")=>{
 
 const getNewsTopHeadlines= async (category="")=>{
     try{
-        const endPoint="http://api.mediastack.com/v1/news"
+        const endPoint="https://api.mediastack.com/v1/news"
         const res=await axios.get(endPoint,{
             params:{
                 access_key:API_KEY,
