@@ -7,13 +7,29 @@ const getNews= async (category="",sort="published_desc")=>{
         const res=await axios.get(endPoint,{
             params:{
                 access_key:API_KEY,
-                categories:category,
+                categories:category || undefined,
                 languages:"en",
                 sort:sort
             }
         })
         return res.data
     }catch(error){
+        console.log(error.message)
+    }
+}
+
+const getNewsSearch= async (keywords="")=>{
+    try {
+        const endPoint="http://api.mediastack.com/v1/news"
+        const res=await axios.get(endPoint,{
+            params:{
+                access_key:API_KEY,
+                languages:"en",
+                keywords:keywords
+            }
+        })
+        return res.data
+    } catch (error) {
         console.log(error.message)
     }
 }
@@ -35,4 +51,4 @@ const getNewsTopHeadlines= async (category="")=>{
     }
 }
 
-export{getNews, getNewsTopHeadlines}
+export{getNews, getNewsTopHeadlines, getNewsSearch}
