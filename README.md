@@ -1,8 +1,35 @@
-# React + Vite
+# 📰 NewsHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NewsHub adalah aplikasi web berbasis React yang menampilkan berita terbaru dari berbagai kategori secara real-time.  
+Aplikasi ini dirancang dengan antarmuka yang sederhana, responsif, dan mudah digunakan.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Demo
+Lihat hasil deploy di sini 👉 [https://newsqhub.netlify.app/](https://newsqhub.netlify.app/)
+
+---
+
+## ⚙️ Fitur Utama
+- 🔍 Menampilkan berita dari berbagai sumber API
+- 🗂️ Filter berdasarkan kategori (misalnya: teknologi, olahraga, bisnis, dll)
+- 📱 Desain responsif untuk desktop & mobile
+- 🧭 Navigasi yang mudah dan interaktif
+- 🚀 Performa cepat berkat React + Vite
+
+---
+
+## 🧩 Teknologi yang Digunakan
+- **React.js**
+- **Vite**
+- **Axios** untuk fetch data API
+- **Tailwind CSS** untuk styling
+- **Netlify** untuk deployment
+
+---
+
+## 🧠 Cara Menjalankan di Lokal
+
+1. Clone repositori:
+   ```bash
+   git clone https://github.com/Mqurtubi/newshub.git
